@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="Style.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.0/css/all.css">
+
+		<title>Home</title>
+	</head>
+	<body>
+
+		<nav class="navbar navbar-dark justify-content-between fixed-top" style="background-color: #222;">
+		  <a class="navbar-brand">CarRezQ</a>
+		  <div class="row">
+<!-- 		  		<div class="dropdown col-2">
+		  		  <a  class="rounded" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		  		  	<i class="fas fa-shopping-bag fa-2x notif" style="font-size: 1.3rem;"><span class="badge"><p>1</p></span></i>
+				  </a>
+				  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+				    <a class="dropdown-item" href="#">Profile</a>
+				    <a class="dropdown-item" href="#">Support</a>
+				    <a class="dropdown-item" href="index.html">Log Out</a>
+				  </div>
+			  </div> -->
+			  <div class="dropdown col-lg-2 col-md-2 d-none d-md-block">
+		  		  <a  class="rounded" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		  	  	  	<i class="fas fa-bell fa-2x notif" style="font-size: 1.3rem;"><span class="badge"><p>1</p></span></i>
+				  </a>
+				  <div class="dropdown-menu dropdown-menu-right notif_menu" aria-labelledby="dropdownMenuButton">
+				    <div class="card-header row sticky-top">
+					    <span class="col-8">Notifications</span>
+					    <a href="" class="col-4">Mark all as read</a>
+				    </div>
+				    	<div class="dropdown-item card w-100">
+						  <div class="card-body">
+							    <h5 class="card-title">#1</h5>
+							    <p class="card-text"><b>CAR :</b> Toyota</p>
+							</div>
+						</div>
+						<div class="dropdown-item card w-100">
+						  <div class="card-body">
+							    <h5 class="card-title">#1</h5>
+							    <p class="card-text"><b>CAR :</b> Toyota</p>
+
+							</div>
+						</div>
+						<div class="dropdown-item card w-100">
+						  <div class="card-body">
+							    <h5 class="card-title">#1</h5>
+							    <p class="card-text"><b>CAR :</b> Toyota</p>
+							</div>
+						</div>
+						<div class="dropdown-item card w-100">
+						  	<div class="card-body">
+							    <h5 class="card-title">#1</h5>
+							    <p class="card-text"><b>CAR :</b> Toyota</p>
+							</div>
+						</div>
+						<div class="dropdown-item card w-100">
+						  	<div class="card-body">
+							    <h5 class="card-title">#1</h5>
+							    <p class="card-text"><b>CAR :</b> Toyota</p>
+							</div>
+						</div>
+						<div class="dropdown-item card w-100">
+						  	<div class="card-body">
+							    <h5 class="card-title">#1</h5>
+							    <p class="card-text"><b>CAR :</b> Toyota</p>
+							</div>
+						</div>
+					<div class="card-footer text-muted position-sticky" style="bottom: 0px;">
+						<a href="">See More</a>
+					</div>
+				  </div>
+			  </div>
+			  <div class="dropdown col-5">
+				  <a class="rounded" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				    <i class="fas fa-user-circle fa-2x notif"></i>
+				  </a>	
+				  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton" style="margin:.65rem 0 0; border-radius: 0px;">
+				    <a class="dropdown-item" href="profile.html">Profile</a>
+				    <a class="dropdown-item" href="#">Support</a>
+				    <a class="dropdown-item" href="index.html">Log Out</a>
+				  </div>
+			  </div>
+		  </div>
+		</nav>
+
+		<div id="wrapper" class="active">
+	      <div id="sidebar-wrapper">
+		      <ul id="sidebar_menu" class="sidebar-nav">
+		           <li class="sidebar-brand container">
+			           	<a id="menu-toggle" class="row" href="">
+				           	<p style="float: left;">Menu</p>
+				           	<i class="fas fa-bars fa-2x" style="float:right;  margin-top:1rem; margin-right: 1.5rem;"></i>
+			           	</a>
+		           </li>
+		      </ul>
+
+		        <div class="nav flex-column nav-pills sidebar-nav" id="v-pills-tab  sidebar myTab" role="tablist" aria-orientation="vertical">    
+		        <li data-toggle="pill"  href="#DBhome" role="tab"  aria-selected="true" aria-controls="DBhome-tab">
+			          <a  class="nav-link" id="DBhome-tab" ><p style="float: left;">Home</p>
+					        <i class="fas fa-home" style="float:right;  margin-top:0.8rem; margin-right:0.2rem; font-size: 1.6rem;"></i>
+					   </a>
+				   </li>
+		          <li data-toggle="pill" href="#MyCar" role="tab" aria-selected="false" aria-controls="MyCar-tab">
+			          <a class="nav-link" id="MyCar-tab" ><p style="float: left;" >My Car</p>
+					        <i class="fas fa-car" style="float:right;  margin-top:0.8rem;margin-right: ; font-size: 1.9rem;"></i>
+					   </a>
+				   </li>
+		          <li data-toggle="pill"  href="#MHistory" role="tab"  aria-selected="false" aria-controls="MHistory-tab">
+			          <a class="nav-link" id="MHistory-tab" ><p style="float: left;">Maint. Record</p>
+					        <i class="far fa-clipboard" style="float:right;  margin-top:0.9rem; margin-right:0.2rem ; font-size: 1.8rem;"></i>
+					   </a>
+				   </li>
+		        </div>
+	      </div> 
+
+			<div class="main tab-content" id="myTabContent">
+
+				<div class="row tab-pane fade show active" id="DBhome" role="tabpanel" aria-labelledby="DBhome-tab">
+					<div class="col-12">
+						<div class="carousel slide latestNews_slider" id="carouselExampleCaptions" data-ride="carousel">
+							    <ol class="carousel-indicators">
+							      <li class="active" data-target="#carouselExampleCaptions" data-slide-to="0"></li>
+							      <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+							      <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+							    </ol>
+							    <div class="carousel-inner">
+							      <div class="carousel-item active">
+							        <img class="d-block  NS_images" src="wallpaper.jpg" data-holder-rendered="true">
+							        <div class="carousel-caption d-none d-block">
+							          <h5>Opening our First Center in Sharqia</h5>
+							          <p>Soon</p>
+							        </div>
+							      </div>
+							      <div class="carousel-item">
+							        <img class="d-block NS_images" alt="Second slide [800x400]" src="wallpaper.jpg" data-holder-rendered="true">
+							        <div class="carousel-caption d-none d-block">
+							          <h5>We Have a New Parteners!</h5>
+							          <p>Say Hello To our New Parteners WolksWagen , Fiat And BMW .</p>
+							        </div>
+							      </div>
+							      <div class="carousel-item">
+							        <img class="d-block NS_images" alt="Third slide [800x400]" src="wallpaper.jpg" data-holder-rendered="true">
+							        <div class="carousel-caption d-none d-block">
+							          <h5>We Made A Change!</h5>
+							          <p>The Car Accideants And Car THift Has Decreased Since Our Luanch.</p>
+							        </div>
+							      </div>
+							    </div>
+							    <a class="carousel-control-prev" role="button" href="#carouselExampleCaptions" data-slide="prev">
+							      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							      <span class="sr-only">Previous</span>
+							    </a>
+							    <a class="carousel-control-next" role="button" href="#carouselExampleCaptions" data-slide="next">
+							      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+							      <span class="sr-only">Next</span>
+							    </a>
+						</div>
+					</div>
+					<div class="col-12">
+						<div class="card UD_PagesThumnail">
+						  <div class="card-body">
+						    <h2 class="card-title">Maintenance</h2>
+						    <p class="card-text mt-4">Haven't Reserve Yet ?! Alraedy Have A Reservation ?! Click on the Image Below</p>
+						  </div>
+						  <img class="UD_PagesThumnail_image rounded" src="parts.jpg" alt="Maintenance Reservation" onclick="location.href='Maint.html';">
+						</div>
+					</div>
+					<div class="col-12">
+						<div class="card UD_PagesThumnail">
+						  <div class="card-body">
+						    <h2 class="card-title">Store</h2>
+						    <p class="card-text mt-4">Don't Know any Spare Parts Prices ?! Want to Buy Spare Parts from a rusted Place ?! Click on the Image Below</p>
+						  </div>
+						  <img class="UD_PagesThumnail_image rounded" src="parts.jpg" alt="Maintenance Reservation" onclick="location.href='Store.html';">
+						</div>
+					</div>
+					<div class="col-12 mb-5">
+						<div class="card UD_PagesThumnail">
+						  <div class="card-body">
+						    <h2 class="card-title">Mobile App</h2>
+						    <p class="card-text mt-4">Want to Get a Reminder on every Periodic change ?! Your Car Broke and You Can't Get Help ?! Click on the Image Below</p>
+						  </div>
+						  <img class="UD_PagesThumnail_image rounded" src="parts.jpg" alt="Maintenance Reservation" onclick="location.href='#';">
+						</div>
+					</div>
+				</div>
+
+				<div class="row tab-pane fade" id="MyCar" role="tabpanel" aria-labelledby="MyCar-tab">
+					<div class="col-12">
+						<div class="container emp-profile">
+			            <form method="post">
+			                <div class="row">
+			                    <div class="col-md-4">
+			                        <div class="profile-img">
+			                            <img src="wallpaper.jpg" alt=""/>
+			                        </div>
+			                    </div>
+			                    <div class="col-md-6">
+			                        <div class="profile-head">
+			                                    <h5>Toyota</h5>
+			                                    <h6>Camrey</h6>
+			                                    <p class="plateNO">Plate: <span>bef1123</span></p>
+			                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+			                                <li class="nav-item">
+			                                    <a class="nav-link active" id="Genral-tab" data-toggle="tab" href="#Genral" role="tab" aria-controls="Genral" aria-selected="true">Genral</a>
+			                                </li>
+			                                <li class="nav-item">
+			                                    <a class="nav-link" id="ChangedParts-tab" data-toggle="tab" href="#ChangedParts" role="tab" aria-controls="ChangedParts" aria-selected="false">Changed Parts</a>
+			                                </li>
+			                            </ul>
+			                        </div>
+			                    </div>
+			                </div>
+			                <div class="row">
+			                    <div class="col-4 d-none d-md-block d-lg-block d-xl-block">
+			                        <div class="profile-extras">
+			                            <p>IMPORTANT LINKS</p>
+			                            <a href="">Your vehicle violations</a><br/>
+			                            <a href="Store.html">Get Spare Parts</a><br/>
+			                            <a href="">Cars Wiki</a>
+			                          	<p>NOTE</p>
+			                          		<a>If The Description Doesnt Match the Car We Won't Be able to Service You</a>
+			                        </div>
+			                    </div>
+			                    <div class="col-md-8 ">
+			                        <div class="tab-content profile-tab" id="myTabContent">
+			                            <div class="tab-pane fade show active" id="Genral" role="tabpanel" aria-labelledby="Genral-tab">
+			                                        <div class="row">
+			                                            <div class="col-md-6">
+			                                                <label>Color</label>
+			                                            </div>
+			                                            <div class="col-md-6">
+			                                                <p>Black</p>
+			                                            </div>
+			                                        </div>
+			                                        <div class="row">
+			                                            <div class="col-md-6">
+			                                                <label>Car Power</label>
+			                                            </div>
+			                                            <div class="col-md-6">
+			                                                <p>2200 CC</p>
+			                                            </div>
+			                                        </div>
+			                                        <div class="row">
+			                                            <div class="col-md-6">
+			                                                <label>Year</label>
+			                                            </div>
+			                                            <div class="col-md-6">
+			                                                <p>2011</p>
+			                                            </div>
+			                                        </div>
+			                                        <div class="row">
+			                                            <div class="col-md-6">
+			                                                <label>Car license</label>
+			                                            </div>
+			                                            <div class="col-md-6">
+			                                                <p>Expires in 04-2022</p>
+			                                            </div>
+			                                        </div>
+			                                        <div class="row">
+			                                            <div class="col-md-6">
+			                                                <label>Last Chacked</label>
+			                                            </div>
+			                                            <div class="col-md-6">
+			                                                <p>12-02-2019</p>
+			                                            </div>
+			                                        </div>
+			                            </div>
+			                            <div class="tab-pane fade" id="ChangedParts" role="tabpanel" aria-labelledby="ChangedParts-tab">
+			                                        <div class="row">
+			                                            <div class="col-md-6">
+			                                                <label>Motor</label>
+			                                            </div>
+			                                            <div class="col-md-6">
+			                                                <p>Manufactured</p>
+			                                            </div>
+			                                        </div>
+			                                        <div class="row">
+			                                            <div class="col-md-6">
+			                                                <label>Car paint</label>
+			                                            </div>
+			                                            <div class="col-md-6">
+			                                                <p>Changed but Still the same</p>
+			                                            </div>
+			                                        </div>
+			                                        <div class="row">
+			                                            <div class="col-md-6">
+			                                                <label>Gearbox</label>
+			                                            </div>
+			                                            <div class="col-md-6">
+			                                                <p>Changed from M/T to A/T</p>
+			                                            </div>
+			                                        </div>
+			                                        <div class="row">
+			                                            <div class="col-md-6">
+			                                                <label>Air Bags</label>
+			                                            </div>
+			                                            <div class="col-md-6">
+			                                                <p>Removed</p>
+			                                            </div>
+			                                        </div>
+			                                        <div class="row">
+			                                            <div class="col-md-6">
+			                                                <label>Wheels and tires</label>
+			                                            </div>
+			                                            <div class="col-md-6">
+			                                                <p>Manufactured</p>
+			                                            </div>
+			                                        </div>
+			                                <div class="row">
+			                                    <div class="col-md-12">
+			                                        <label>Car Condition</label><br/>
+			                                        <p>Your detail description</p>
+			                                    </div>
+			                                </div>
+			                            </div>
+				                        </div>
+				                    </div>
+				                </div>
+				                <div class="col-12 d-md-none">
+			                        <div class="profile-work">
+			                            <p>IMPORTANT LINKS</p>
+			                            <a href="">Your vehicle violations</a><br/>
+			                            <a href="">Get Spare Parts</a><br/>
+			                            <a href="">Cars Wiki</a>
+			                          	<p>NOTE</p>
+			                          		<a>If The Description Doesnt Match the Car We Won't Be able to Service You</a>
+			                        </div>
+				                </div>
+				            </form>           
+				        </div>
+				    </div>
+				</div>
+
+				<div class="row tab-pane fade" id="MHistory" role="tabpanel" aria-labelledby="MHistory-tab">
+					<div class="card text-center" style=" margin: auto; margin-top: 80px; width: 90%;">
+					  <div class="card-header">
+					    <h1>Maintanence Record</h1>
+					  </div>
+					  <div class="card-body">
+   						 <div class="card w-100" style="margin-top: 10px;">
+						  <div class="card-body">
+						    <h5 class="card-title"   style="color: #28a745;">Up Coming</h5>
+						    <p class="card-text"><b>CAR :</b> Toyota</p>
+						    <p class="card-text"><b>DATE :</b> 18-11-2019</p>
+						  	<hr>
+						  	<p><b>DESCRIBTION :</b>Will be Filled once the Maintanence is done !</p>
+						  </div>
+						  <div class="card-footer text-muted">
+					  		<p class="card-text"><b>COST :</b></p>
+					  	  </div>
+						</div>
+
+					    <div class="card w-100" style="margin-top: 10px;">
+						  <div class="card-body">
+						    <h5 class="card-title">#1</h5>
+						    <p class="card-text"><b>CAR :</b> Toyota</p>
+						    <p class="card-text"><b>DATE :</b> 02-05-2019</p>
+						  	<hr>
+						  	<p><b>DESCRIBTION :</b>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						  	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						  	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						  	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						  	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						  	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						  	<div class="toggle-extra" style="display:none; text-align: left;">
+						    	<p><b>Changed Parts :</b></p>
+						    	<ol>
+						    		<li>ass</li>
+						    		<li>dick</li>
+						    		<li>puss</li>
+						    	</ol>
+							</div>
+
+						    <a class="btn btn-warning nav-toggle toggle-extra-button">Read More</a>
+						  </div>
+						  <div class="card-footer text-muted">
+					  		<p class="card-text"><b>COST :</b> 50$</p>
+					  	  </div>
+						</div>
+
+						<div class="card w-100" style="margin-top: 10px;">
+						  <div class="card-body">
+						    <h5 class="card-title">#2</h5>
+						    <p class="card-text"><b>CAR :</b> Toyota</p>
+						    <p class="card-text"><b>DATE :</b> 13-01-2019</p>
+						  	<hr>
+						  	<p><b>DESCRIBTION :</b>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						  	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						  	quis nostrud 	 ullamco laboris nisi ut aliquip ex ea commodo
+						  	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						  	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						  	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						  	<div class="toggle-extra"  style="display:none; text-align: left;">
+						    	<p><b>Changed Parts :</b></p>
+						    	<ol>
+						    		<p>NONE</p>
+						    	</ol>
+							</div>
+						    <a class="btn btn-warning toggle-extra-button">Read More</a>
+						  </div>
+						  <div class="card-footer text-muted">
+					  		<p class="card-text"><b>COST :</b> 100$</p>
+					  	  </div>
+						</div>
+
+					</div>
+					  
+					</div>
+						<div class="row">
+							<div class="buffer col-lg-9 col-md-10 col-sm-10"></div>
+							<a href="Maint.html" class="text-center mt-5 mb-5 col-lg-3 col-md-12 col-sm-12 text-left" style="color: #28a745;">Make a New Reservation >></a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<!-- Nav tabs -->
+		</div>
+
+		<script type="text/javascript">
+
+			$('#myTab a').on('click', function (e) {
+			  e.preventDefault()
+			  $(this).tab('show')
+			})
+
+			$("#menu-toggle").click(function(e) {
+	        e.preventDefault();
+	        $("#wrapper").toggleClass("active");
+			});
+
+			// Collapse
+			$(document).on("click", ".toggle-extra-button", function() {
+			  // Check if text is more or less
+			  if ($(this).text() == "Read More") {
+			    $(this).text("Read Less");
+			    $(this).parent().children(".toggle-extra").slideDown(); 
+			  } 
+			  else {
+			    $(this).text("Read More");
+			    $(this).parent().children(".toggle-extra").slideUp();
+			  }
+			});
+		</script>
+	</body>
+</html>  

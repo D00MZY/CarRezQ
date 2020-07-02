@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <!-- 	bootstrap links -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <!-- -->
+        <link rel="stylesheet" type="text/css" href="Style.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        
+	    <title>RezQ Store</title>
+    </head>
+    <body id="storeMainBody">
+
+        <nav class="navbar navbar-dark justify-content-between fixed-top" style="background-color: #222;">
+          <a class="navbar-brand">RezQ Store</a>
+          <div class="row">
+              <div class="dropdown">
+                  <a  class="rounded" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-shopping-bag fa-2x notif" style="font-size: 1.3rem;"><span class="badge">*</span></i>
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-right notif_menu" aria-labelledby="dropdownMenuButton">
+                    <div class="card-header row sticky-top">
+                        <span class="col-7">Shopping cart</span>
+                        <a href="" class="col-5">Confirm & Purchase</a>
+                    </div>
+                        <div class="dropdown-item card w-100">
+                          <div class="card-body">
+                                <h5 class="card-title">Electric Fues</h5>
+                                <p class=""><b>Quantitiy :</b> 10 | <b>Price :</b> 50$</p>
+                                <button class="btn btn-outline-warning form-btn" onclick="">Edit</button>
+                                <button class="btn btn-warning form-btn deleteBtn" onclick="delete_Parent(this)">Remove</button>
+                            </div>
+                        </div>
+                        <div class="dropdown-item card w-100">
+                          <div class="card-body">
+                                <h5 class="card-title">Gas filter</h5>
+                                <p class=""><b>Quantitiy :</b> 2 | <b>Price :</b> 50$</p>
+                                <button class="btn btn-outline-warning form-btn" onclick="">Edit</button>
+                                <button class="btn btn-warning form-btn " onclick="delete_Parent(this)">Remove</button>
+                            </div>
+                        </div>
+                        <div class="dropdown-item card w-100">
+                          <div class="card-body">
+                                <h5 class="card-title">Ninja turtels</h5>
+                                <p class=""><b>Quantitiy :</b> 4 | <b>Price :</b> 1234$</p>
+                                <button class="btn btn-outline-warning form-btn" onclick="">Edit</button>
+                                <button class="btn btn-warning form-btn" onclick="delete_Parent(this)">Remove</button>
+                            </div>
+                        </div>
+                    <div class="card-footer text-muted position-sticky" style="bottom: 0px;">
+                        <a style="cursor: default;"><b>Total Price :</b> 1344$</a>
+                    </div>
+                  </div>
+              </div>
+              <div class="dropdown col-5">
+                  <a class="rounded" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-user-circle fa-2x notif"></i>
+                  </a>  
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton" style="margin:.65rem 0 0; border-radius: 0px;">
+                    <a class="dropdown-item" href="profile.html">Profile</a>
+                    <a class="dropdown-item" href="#">Support</a>
+                    <a class="dropdown-item" href="index.html">Log Out</a>
+                  </div>
+              </div>
+          </div>
+        </nav>
+        <div class="container" id="storeBody" >
+
+            <div class="row">
+
+                <form method="" id="storefilter" class="col-lg-3" style="border-right: 1px solid #ccc;">
+
+                    <h1 class="my-4">Filters</h1>
+                    <hr>
+                    <div class="list-group">
+                        <p><b>Category :</b></p>
+                        <div class="radio-toolbar">
+                            <input type="radio" id="radioElec" name="partsCategory" value="Electrical">
+                            <label for="radioElec">Electrical</label>
+
+                            <input type="radio" id="radioOil" name="partsCategory" value="Oils">
+                            <label for="radioOil">Oils</label> 
+
+                            <input type="radio" id="radioMech" name="partsCategory" value="Mechanical">
+                            <label for="radioMech">Mechanical</label>
+
+                            <input type="radio" id="radioBo" name="partsCategory" value="Body">
+                            <label for="radioBo">Body</label> 
+                        </div>
+                    </div>
+                    <br>
+                    <div class="list-group">
+                        <p><b>Brand :</b></p>
+                        <select class="form-control" id="sel1" name="PartsBrand">
+                            <option>All</option>
+                            <option>Toyota</option>
+                            <option>Hyundai</option>
+                            <option>Kia</option>
+                            <option>Ford</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div id="priceRangeSec">
+                        <p><b>Price Range :</b></p> 
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                            <span class="input-group-text" id="maxPrice">Max</span>
+                            </div>
+                            <input type="number" name="maxPrice" class="form-control" max="99999" min="" onkeypress="return onlyNumberKey(event)">
+                        </div>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                            <span class="input-group-text" id="minPrice">Min</span>
+                            </div>
+                            <input type="number" name="minPrice" class="form-control" min="0" max="" onkeypress="return onlyNumberKey(event)">
+                        </div>
+                    </div>
+                    <input type="Submit" class="btn btn-warning form-btn" value="Submit">
+                    <input type="Reset" class="btn btn-outline-warning form-btn" value="Reset">
+                </form>
+
+                  <!-- /.col-lg-3 -->
+
+                <div class="col-lg-9">
+
+                    <section id="search-sec" class="mb-5">
+                        <div class="container">
+                            <form action="#" method="post" novalidate="novalidate">
+                                <div class="row">
+                                    <div class="col-lg-9 col-md-9 col-sm-12 p-0">
+                                        <input type="text" class="form-control search-slt" placeholder="Which part do you want ?">
+                                    </div>
+                                    <div class="col-lg-1 col-md-1 col-sm-0" style="height: 1rem;"></div>
+                                    <div class="col-lg-2 col-md-2 col-sm-12 p-0">
+                                        <button type="button" class="btn btn-warning wrn-btn">Search</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </section>
+                    <div class="col-lg-1 col-md-1 col-sm-0" style="height: 1rem;"></div>
+
+                    <div id="products-sec" class="row">
+
+                      <div class="product-card col-lg-4 col-md-6 col-sm-6 mb-4">
+                        <div class="card h-100">
+                          <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                          <div class="card-body">
+                            <h4 class="card-title">
+                              <a href="#">Item One</a>
+                            </h4>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                          </div>
+                          <div class="card-footer">
+                            <h5 class="text-muted">$24.99</h5>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="product-card col-lg-4 col-md-6 col-sm-6 mb-4">
+                        <div class="card h-100">
+                          <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                          <div class="card-body">
+                            <h4 class="card-title">
+                              <a href="#">Item One</a>
+                            </h4>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                          </div>
+                          <div class="card-footer">
+                            <h5 class="text-muted">$24.99</h5>
+                          </div>
+                        </div>
+                      </div>
+
+                     <div class="product-card col-lg-4 col-md-6 col-sm-6 mb-4">
+                        <div class="card h-100">
+                          <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                          <div class="card-body">
+                            <h4 class="card-title">
+                              <a href="#">Item One</a>
+                            </h4>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                          </div>
+                          <div class="card-footer">
+                            <h5 class="text-muted">$24.99</h5>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="product-card col-lg-4 col-md-6 col-sm-6 mb-4">
+                        <div class="card h-100">
+                          <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                          <div class="card-body">
+                            <h4 class="card-title">
+                              <a href="#">Item One</a>
+                            </h4>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                          </div>
+                          <div class="card-footer">
+                            <h5 class="text-muted">$24.99</h5>
+                          </div>
+                        </div>
+                      </div>
+
+                     <div class="product-card col-lg-4 col-md-6 col-sm-6 mb-4">
+                        <div class="card h-100">
+                          <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                          <div class="card-body">
+                            <h4 class="card-title">
+                              <a href="#">Item One</a>
+                            </h4>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                          </div>
+                          <div class="card-footer">
+                            <h5 class="text-muted">$24.99</h5>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="product-card col-lg-4 col-md-6 col-sm-6 mb-4">
+                        <div class="card h-100">
+                          <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                          <div class="card-body">
+                            <h4 class="card-title">
+                              <a href="#">Item One</a>
+                            </h4>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                          </div>
+                          <div class="card-footer">
+                            <h5 class="text-muted">$24.99</h5>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="product-card col-lg-4 col-md-6 col-sm-6 mb-4">
+                        <div class="card h-100">
+                          <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                          <div class="card-body">
+                            <h4 class="card-title">
+                              <a href="#">Item One</a>
+                            </h4>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                          </div>
+                          <div class="card-footer">
+                            <h5 class="text-muted">$24.99</h5>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="product-card col-lg-4 col-md-6 col-sm-6 mb-4">
+                        <div class="card h-100">
+                          <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                          <div class="card-body">
+                            <h4 class="card-title">
+                              <a href="#">Item One</a>
+                            </h4>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                          </div>
+                          <div class="card-footer">
+                            <h5 class="text-muted">$24.99</h5>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="product-card col-lg-4 col-md-6 col-sm-6 mb-4">
+                        <div class="card h-100">
+                          <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                          <div class="card-body">
+                            <h4 class="card-title">
+                              <a href="#">Item One</a>
+                            </h4>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                          </div>
+                          <div class="card-footer">
+                            <h5 class="text-muted">$24.99</h5>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-3"></div>
+                <div id="storePagination" class="col-lg-9 mt-5 mb-5">
+                      <ul class="pagination justify-content-center">
+                        <li class="page-item">
+                          <a class="page-link" href="#" tabindex="-1">Previous</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                          <a class="page-link" href="#">Next</a>
+                        </li>
+                      </ul>
+                </div>
+            </div>
+
+        </div>
+
+      <footer class="page-footer font-small" style="bottom: 0;">
+        <div class="footer-copyright text-center py-3">© 2020 Copyright:
+            <a href="#"> CarRezQ.com</a>
+        </div>
+      </footer> 
+
+        <script type="text/javascript">
+
+            // function getMax(){
+            //     var x = document.getElementById("maxPrice").value();
+            //     return document.getElementById("minPrice").getAttribute("max")=x;
+            // }
+
+            function delete_Parent(e)
+            {
+                e.parentNode.parentNode.parentNode.removeChild(e.parentNode.parentNode);
+            }
+
+            function onlyNumberKey(evt) { 
+          
+                var ASCIICode = (evt.which) ? evt.which : evt.keyCode 
+                if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57)) 
+                    return false; 
+                return true; 
+            } 
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,796 @@
+body{
+	margin:0;
+	background-color: white;
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+}
+
+hr{
+	width: 6rem;
+}
+
+ul{
+	list-style: none;
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+option:hover{
+  color: #cc9900;
+  background-color: #e9ecef;
+  cursor: pointer;
+}
+
+option:focus{
+  color: #cc9900;
+  background-color: #e9ecef;
+  cursor: pointer;
+}
+
+.h1F{
+  color:#222;
+  text-shadow:2px 2px #e0a800;
+}
+
+.h1S{
+  color: white; 
+  text-shadow: 2px 2px #e0a800;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link{
+  color:#ffc107 ;
+  background: #222;
+}
+
+.nav-link{
+  cursor: pointer;
+}
+
+.card{
+  border:0px solid rgba(0,0,0,.125);
+
+}
+
+.card-header, .card-footer{
+  background-color: #e6e6e6;
+}
+
+.form-control:focus{
+  border-color: #d39e00;
+  box-shadow:0px 0px 0px 0.2rem rgba(222,170,12,0.5);
+}
+
+
+/**Navbars**/
+
+#nav{
+	background-color:; 
+	transition: all 1s ease-in-out;
+}
+
+.scroll{
+	background-color: #222;
+}
+
+.row i:hover{
+	color:#595959;
+	cursor: pointer;
+}
+
+.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover{
+	color: #ffc107;
+}
+
+.notif{
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  border-radius: 2px;
+  color: #999;
+}
+
+.badge{
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  padding: 5px 10px;
+  width: 1rem;
+  height: 1rem;
+  text-align: center;
+  background: red;
+  color: white;
+  font-size: 0.49em;
+}
+
+.dropdown a:hover{
+	color:#ffc107;
+	cursor: pointer;
+	background-color: #222;
+	transition: background .5s;
+}
+
+.dropdown a:active{
+	background-color: black;
+}
+
+.notif_menu{
+  overflow-y: scroll;
+  overflow-x: hidden;
+  max-height: 40rem; 
+  width: 25rem; 
+  padding: 0px;
+  margin: .65rem 0 0;
+}
+
+.notif_menu > .card{
+  max-height: 10rem;
+  border:1px solid rgba(0,0,0,.125);
+}
+
+ .notif_menu > .card:active{
+  /*there is a problem : on active the <P> change color as well*/
+  background-color: #fff;
+ }
+
+.notif_menu div{
+  border-radius: 0px;
+}
+
+.notif_menu > .card-header ,.notif_menu > .card-footer{
+  height: 3rem;
+  border-radius: 0px;
+  background-color: black;
+  color: white; 
+}
+
+.card-header a, .card-footer a{
+ color: #e0a800;
+ font-size:0.8rem;
+ background-color: black;
+}
+
+.card-header a:hover, .card-footer a:hover{
+  color: #cc9900;
+  background-color: black;
+}
+
+.store_nav{
+  background-color: #222;
+  height: 7rem;
+}
+
+/**User Dashboard**/
+
+#wrapper {
+    padding-left:1rem;
+    transition: all .4s ease 0s;
+    height: 100%;
+    position: sticky;
+}
+
+#sidebar-wrapper {
+    margin-left: -150px;
+    left:-1rem; /*the width of the small nav*/
+    width: 15rem;
+    top: 3.6rem;
+    background: #222;
+    position: fixed;
+    height: 100%;
+    z-index: 10000;
+    transition: all .4s ease 0s;
+}
+
+.sidebar-nav {
+    display: block;
+    float: left;
+    width: 15rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#page-content-wrapper {
+  dwpadding-left: 0;
+  margin-left: 0;
+  width: 100%;
+  height: auto;
+}
+
+#wrapper.active #sidebar-wrapper {
+    left: 9rem;
+}
+
+#page-content-wrapper {
+  width: 100%;
+}
+
+
+#sidebar_menu li a, .sidebar-nav li a {
+    color: #999;
+    display: block;
+    float: left;
+    text-decoration: none;
+    width: 15rem;
+    background: #252525;
+    border-top: 1px solid #373737;
+    border-bottom: 1px solid #1A1A1A;
+    transition: background .5s;
+}
+
+.sidebar-nav li {
+  line-height: 40px;
+  text-indent: 20px;
+}	
+
+.sidebar-nav li a:hover {
+  color: #ffc107;
+  background-color: #222;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+  text-decoration: none;
+  background-color: black;
+}
+
+.navbar-brand{
+  color: #ffc107 !important;
+}
+
+
+.sidebar-nav > .sidebar-brand {
+  height: 65px;
+  line-height: 60px;
+  font-size: 18px;
+}
+
+.main{
+	position: absolute;
+	float: right;
+	transition: all .4s ease 0s;
+	text-align: center;
+}
+
+#wrapper.active .main{
+	width: calc(100% - 13.5rem); /*keeps 100% minus nav size*/
+	margin-left: 13.5rem;
+}
+
+#wrapper .main{
+	width: calc(100% - 3.5rem); /*keeps 100% minus nav size*/
+	margin-left: 3.5rem;
+}
+
+.latestNews_slider{
+	height: 30rem;
+}
+
+.NS_images{
+	height: 30rem;
+	width: 100%;
+}
+
+.UD_PagesThumnail_imagegesThumnail{
+	width: 98%;
+	margin: auto;
+	margin-right: 20px;
+  margin-top: 6rem;
+	border-width: 0;
+}
+
+.UD_PagesThumnail_image{
+	height: 20rem;
+	width: 90%;
+	margin: auto;
+	cursor: pointer;
+	opacity: 0.9;
+	border: 1px solid #ffc107;
+}
+
+.UD_PagesThumnail_image:hover{
+	opacity: 1;
+}
+
+/**My Car**/
+
+.emp-profile{
+    padding: 3%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    border-radius: 0.5rem;
+    background: #fff;
+}
+.profile-img{
+    text-align: center;
+}
+.profile-img img{
+    width: 70%;
+    height: 100%;
+}
+
+.profile-head h5{
+    color: #333;
+}
+.profile-head h6{
+    color: #e0a800;
+}
+.profile-edit-btn{
+    border: none;
+    border-radius: 1.5rem;
+    width: 70%;
+    padding: 2%;
+    font-weight: 600;
+    color: #6c757d;
+    cursor: pointer;
+}
+.plateNO{
+    font-size: 12px;
+    color:  #495057;
+    margin-top: 5%;
+}
+.plateNO span{
+    font-size: 15px;
+    font-weight: 600;
+}
+.profile-head .nav-tabs{
+    margin-bottom:5%;
+}
+.profile-head .nav-tabs .nav-link{
+    font-weight:600;
+    border: none;
+}
+.profile-head .nav-tabs .nav-link.active{
+    border: none;
+    border-bottom:2px solid #cc9900;
+}
+.profile-extras{
+    margin-top: -15%;
+     margin: 14%;
+}
+.profile-extras p{
+    font-size: 12px;
+    color: #818182;
+    font-weight: 600;
+    margin-top: 10%;
+}
+.profile-extras a{
+    text-decoration: none;
+    color: #495057;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.profile-tab label{
+    font-weight: 600;
+}
+.profile-tab p{
+    font-weight: 600;
+    color: #cc9900;
+}
+
+.nav-item a{
+  color: #e0a800;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.nav-item a:hover{
+  color:  #b38600;
+}
+
+
+/**Landining Page**/
+
+#Header{
+	height: 50rem;
+	color: white;
+	margin-top: -3.5rem;
+	background: url(wallpaper.jpg) no-repeat center center fixed;
+}
+
+.buffer{
+	height: 8rem;
+}
+
+.btn{
+	border-radius: 50px;
+	padding: 1rem 2rem;
+	font-weight: bold;
+}
+
+#Features{
+	background-color: white;
+	color: black;
+}
+
+.fetCard{
+	margin-top: 20px;
+}
+
+.fetCard:hover h4{
+	color:#ffc107 ;
+	cursor: pointer;
+}
+
+#supported_brands{
+	background-color: #d9d9d9;
+	color:  #595959;
+	padding: 6px 0;
+	overflow: hidden;
+}
+
+.brands{
+	text-align: center;
+}
+
+#e-commerce{
+	color: white;
+	padding-bottom: 100px;
+	background: url(parts.jpg) no-repeat center center fixed;
+	background-size: cover;
+	background-position: center;	
+}
+
+#Centers{
+	background-color: white;
+	color: black;
+	padding-bottom: 100px;
+}
+
+.img-thumbnail{
+	border-color: #ffc107;
+	background-color: black;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  perspective: 1000px;
+  color: white;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front{
+	cursor: pointer;
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+  background-image: url(location.gif);
+  background-size: cover;
+  background-position: center;
+  color: white;
+  font-size: 17px;
+  text-align: left;
+  border: 2px solid #ffc107;
+
+}
+
+#us{
+	background-color: #d9d9d9;
+	color:  #595959;
+}
+
+.whoWeAre{
+  margin:100px 0px 100px 0px;
+}
+
+.team_card{
+	border:1px solid #d9d9d9;
+	background-color: white;
+}
+
+.we{
+	border: 2px solid white;
+	height: 12rem;
+}
+
+.socials{
+	width: 10rem;
+	height: 2rem;
+	margin:auto;
+	margin-bottom: 100px;
+}
+
+.github_icon , .twitter_icon{
+	width: 5rem;
+	height: 2rem;
+	float: left;
+	color: white;
+	margin-top: 30px;
+}
+
+.github_icon{
+	background-color: #bd2c00;
+
+}
+
+.twitter_icon{
+	background-color: #1da1f2;
+}
+
+#Feedback{
+	background-color: white;
+	
+}
+
+.page-footer{
+	background-color: #222;
+	color:#ffc107;
+}
+
+.page-footer i:hover{
+	cursor: pointer;
+	color: #e0a800;
+}
+
+/**login**/
+
+.Login_card{
+	margin-top:150px;
+  margin-bottom: 134px;
+}
+
+.user_cont{
+    margin-top: -25px;
+    width: 6rem;
+  }
+ 
+
+
+@media (max-width:767px) {
+
+  .user_cont{
+    width: 5rem;
+  }
+
+    #wrapper {
+    left:25rem;
+    transition: all .4s ease 0s;
+}
+
+#wrapper .main{
+  width: calc(100% - 13.5rem); /*keeps 100% minus nav size*/
+  margin-left: 13.5rem;
+}
+
+#sidebar-wrapper {
+    left: 9rem;
+}
+#wrapper.active {
+    padding-left: ;
+}
+#wrapper.active #sidebar-wrapper {
+    left: -1rem;
+    width: 15rem;
+    transition: all .4s ease 0s;
+}
+
+#wrapper.active .main{
+  width: calc(100% - 3.5rem); /*keeps 100% minus nav size*/
+  margin-left: 3.5rem;
+}
+
+.brands{
+  width:25%;
+}
+
+.fetCard{
+  width: 50%;
+}
+
+.whoWeAre{
+  width: 80%;
+  margin: auto;
+}
+}
+
+
+#search-sec{
+    padding: 2rem;
+}
+.search-slt{
+    display: block;
+    width: 100%;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: #55595c;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    height: calc(3rem + 2px) !important;
+    border-radius:0;
+}
+.wrn-btn{
+    width: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: capitalize;
+    border-radius:0;
+}
+
+#maint_reservationT , #resv_card{
+  margin-top: 8rem;
+}
+
+#maint_reservationT > .card{
+  margin-top: 2rem;
+  border: 1px solid #ccc;
+}
+
+.appoint_T li{
+  margin-top: 1rem;
+}
+
+.appoint_T a{
+  border-radius:10px;
+  padding: 0.2rem 0rem;
+  font-weight:500;
+}
+
+.appoint_T p{
+  float: left;
+  margin-bottom: 0px;
+}
+
+@media (min-width: 992px){
+    #search-sec{
+        position: relative;
+        top: 3rem;
+        background: black;
+    }
+}
+
+@media (max-width: 992px){
+    #search-sec{
+        margin-top: 3rem;
+        background: black;
+    }
+}
+
+.maint_type button{
+  background-color: white;
+  border-color:white;
+  padding:0px;
+}
+
+/* store */
+
+
+#storeMainBody .btn-outline-warning ,#profileCard .btn-outline-warning{
+  color: black
+  }
+
+#storeMainBody .btn-outline-warning:hover ,#profileCard .btn-outline-warning:hover{
+  color: #cc9900;
+  background-color: #e9ecef;
+  }
+
+.dropdown .form-btn{
+  padding: 1px 8px;
+  margin-right: 1rem; 
+  width: 6rem;
+}
+
+.storeLogo{
+  margin: auto;
+  margin-bottom: -2rem;
+  width: 10%;
+  background-color: #ffc107;
+  border-radius: 10px;
+  padding: 1rem;
+  color: #222 !important;
+  text-align: center;
+}
+
+#storeBody{
+  margin-top: 6rem;
+}
+
+#storeBody a{
+  color: #e0a800;
+}
+
+#storeBody a:hover{
+  color: #cc9900;
+}
+
+#priceRangeSec > .input-group{
+  width: 45%;
+  float: right;
+  margin-right: 8px;
+}
+
+.form-btn{
+  margin: 10px;
+  padding:10px 20px;
+  border-radius: 5px;
+  float: right;
+  border: 1px solid rgba(0,0,0,.125);
+  font-size :16px;
+  font-weight:400;
+}
+
+.radio-toolbar {
+  margin: 10px;
+}
+
+.radio-toolbar input[type="radio"] {
+  opacity: 0;
+  position: fixed;
+  width: 0;
+}
+
+.radio-toolbar label {
+    display: inline-block;
+    background-color: white;
+    padding: 10px 20px;
+    font-family: sans-serif, Arial;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.radio-toolbar label:hover {
+  color: #cc9900;
+}
+
+.radio-toolbar input[type="radio"]:focus + label {
+}
+
+.radio-toolbar input[type="radio"]:checked + label {
+  background-color: #222;
+  color: #cc9900;
+  transition: background .5s;
+}
+
+#storePagination a{
+  color: black;
+}
+
+
+@media (max-width:767px) {
+  #storeBody{
+  margin-top: 3rem;
+}
+
+.storeLogo{
+  width: 25%
+}
+
+#products-sec > .product-card{
+  width:50%;
+}
+}
+
+/*profile*/
+
+#profilePage{
+  margin-top: 5rem;
+}

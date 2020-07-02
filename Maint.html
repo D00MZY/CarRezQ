@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" type="text/css" href="Style.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.0/css/all.css">
+
+	<title>Maintenance</title>
+</head>
+<body>
+	<nav class="navbar navbar-dark justify-content-between fixed-top" style="background-color: #222;">
+		  <a class="navbar-brand">CarRezQ</a>
+		  <div class="row">
+			  <div class="dropdown col-lg-2 col-md-2 d-none d-md-block">
+		  		  <a  class="rounded" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		  	  	  	<i class="fas fa-bell fa-2x notif" style="font-size: 1.3rem;"><span class="badge"><p>1</p></span></i>
+				  </a>
+				  <div class="dropdown-menu dropdown-menu-right notif_menu" aria-labelledby="dropdownMenuButton">
+				    <div class="card-header row sticky-top">
+					    <span class="col-8">Notifications</span>
+					    <a href="" class="col-4">Mark all as read</a>
+				    </div>
+				    	<div class="dropdown-item card w-100">
+						  <div class="card-body">
+							    <h5 class="card-title">#1</h5>
+							    <p class="card-text"><b>CAR :</b> Toyota</p>
+							</div>
+						</div>
+						<div class="dropdown-item card w-100">
+						  <div class="card-body">
+							    <h5 class="card-title">#1</h5>
+							    <p class="card-text"><b>CAR :</b> Toyota</p>
+
+							</div>
+						</div>
+						<div class="dropdown-item card w-100">
+						  <div class="card-body">
+							    <h5 class="card-title">#1</h5>
+							    <p class="card-text"><b>CAR :</b> Toyota</p>
+							</div>
+						</div>
+						<div class="dropdown-item card w-100">
+						  	<div class="card-body">
+							    <h5 class="card-title">#1</h5>
+							    <p class="card-text"><b>CAR :</b> Toyota</p>
+							</div>
+						</div>
+						<div class="dropdown-item card w-100">
+						  	<div class="card-body">
+							    <h5 class="card-title">#1</h5>
+							    <p class="card-text"><b>CAR :</b> Toyota</p>
+							</div>
+						</div>
+						<div class="dropdown-item card w-100">
+						  	<div class="card-body">
+							    <h5 class="card-title">#1</h5>
+							    <p class="card-text"><b>CAR :</b> Toyota</p>
+							</div>
+						</div>
+					<div class="card-footer text-muted position-sticky" style="bottom: 0px;">
+						<a href="">See More</a>
+					</div>
+				  </div>
+			  </div>
+			  <div class="dropdown col-5">
+				  <a class="rounded" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				    <i class="fas fa-user-circle fa-2x notif"></i>
+				  </a>	
+				  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton" style="margin:.65rem 0 0; border-radius: 0px;">
+				    <a class="dropdown-item" href="#">Profile</a>
+				    <a class="dropdown-item" href="#">Support</a>
+				    <a class="dropdown-item" href="index.html">Log Out</a>
+				  </div>
+			  </div>
+		  </div>
+		</nav>
+
+<section class="search-sec">
+    <div class="container">
+        <form action="#" method="post" novalidate="novalidate">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-lg-2 col-md-3 col-sm-12 p-0">
+                            <input type="text" class="form-control search-slt" placeholder="EGYPT" disabled>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                            <select class="form-control search-slt" id="maint_search">
+                                <option>City</option>
+                                <option>Example one</option>
+                                <option>Example one</option>
+                                <option>Example one</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                            <select class="form-control search-slt" id="maint_search">
+                                <option>Neighbourhood</option>
+                                <option>Example one</option>
+                                <option>Example one</option>
+                                <option>Example one</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-1 col-md-1 col-sm-12 p-0">
+                        	<input class="form-control search-slt" type="date" name="appoint_date">
+                        </div>
+                        <div class="col-lg-1 col-md-1 col-sm-0" style="height: 1rem;"></div>
+                        <div class="col-lg-2 col-md-2 col-sm-12 p-0">
+                            <button type="button" class="btn btn-warning wrn-btn">Search</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+
+<div id="maint_reservationT" class="container text-center">
+	<h1 class="mb-5 h1F">Available Appointments</h1>
+
+	<div class="card mb-1 w-100">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.2387970717254!2d30.946080684929835!3d29.97256652891951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145856f78386e6a9%3A0x5024fd9866839e3d!2z2KfZhNit2LXYsdmK!5e0!3m2!1sar!2seg!4v1585430092405!5m2!1sar!2seg" class="card-img h-100" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>    
+	</div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Giza, 6 October, 1st Neighbourhood, st. hoho, block 200</h5>
+        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,.</p>
+        <p class="card-text">
+	        <p><b>Time</b></p>
+				<ul class="appoint_T">
+					<li>
+					<p class="col-6">02.00PM ~ 04.00PM</p>
+					<a href="reserve_app.html" class="btn btn-warning col-3">Reserve</a>
+					</li>
+					<li>
+					<p  class="col-6">07.00PM ~ 08.00PM</p>
+					<a href="reserve_app.html" class="btn btn-warning col-3">Reserve</a>
+					</li>
+				</ul>
+			</p>
+      </div>
+    </div>
+
+  </div>
+	</div>
+
+    <div class="card mb-1 w-100">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.2387970717254!2d30.946080684929835!3d29.97256652891951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145856f78386e6a9%3A0x5024fd9866839e3d!2z2KfZhNit2LXYsdmK!5e0!3m2!1sar!2seg!4v1585430092405!5m2!1sar!2seg" class="card-img h-100" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>    
+	</div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Giza, 6 October, 1st Neighbourhood, st. yay, block 650</h5>
+        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,.</p>
+        <p class="card-text">
+	        <p><b>Time</b></p>
+				<ul class="appoint_T">
+					<li>
+					<p class="col-6">02.00PM ~ 04.00PM</p>
+					<a href="reserve_app.html" class="btn btn-warning col-3">Reserve</a>
+					</li>
+					<li>
+					<p  class="col-6">07.00PM ~ 08.00PM</p>
+					<a href="reserve_app.html" class="btn btn-warning col-3">Reserve</a>
+					</li>
+				</ul>
+			</p>
+      </div>
+    </div>
+
+  </div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="buffer col-lg-10 col-md-12 col-sm-12"></div>
+	<a href="UserDashboard.html" class="text-center mt-5 col-lg-2 col-md-12 col-sm-12" style="color: #28a745;">Back To Dashboard >></a>
+</div>
+
+<footer class="page-footer font-small mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 pt-5">
+        <div class="mb-5 flex-center text-center align-items-center">
+          <a class="fb-ic"> 
+            <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <a class="tw-ic">
+            <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <a class="gplus-ic">
+            <i class="fab fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <a class="li-ic">
+            <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <a class="ins-ic">
+            <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html> 

@@ -21,11 +21,11 @@
         <nav class="navbar navbar-dark justify-content-between fixed-top" style="background-color: #222;">
           <a class="navbar-brand">RezQ Store</a>
           <div class="row">
-              <div class="dropdown">
-                  <a  class="rounded" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <div class="dropdown " id="shoopingCart">
+                  <a  class="rounded" type="button" id="dropdownMenuButton" onclick="calcTotalPrice()" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="fas fa-shopping-bag fa-2x notif" style="font-size: 1.3rem;"><span class="badge">*</span></i>
                   </a>
-                  <div class="dropdown-menu dropdown-menu-right notif_menu" aria-labelledby="dropdownMenuButton">
+                  <div class="dropdown-menu dropdown-menu-right notif_menu" aria-labelledby="dropdownMenuButton" onclick=" event.stopPropagation();">
                     <div class="card-header row sticky-top">
                         <span class="col-7">Shopping cart</span>
                         <a href="" class="col-5">Confirm & Purchase</a>
@@ -33,29 +33,41 @@
                         <div class="dropdown-item card w-100">
                           <div class="card-body">
                                 <h5 class="card-title">Electric Fues</h5>
-                                <p class=""><b>Quantitiy :</b> 10 | <b>Price :</b> 50$</p>
-                                <button class="btn btn-outline-warning form-btn" onclick="">Edit</button>
+                                <p><b>Quantitiy :</b> <span class="productQuant">1</span> | <b>Price :</b>  <span class="productPrice">10</span> $</p>
+                                <p class="d-none"><b>Quantitiy :</b> <input type="number" onkeypress="return onlyNumberKey(event)" class="form-control cuantEdit"> 
+                                    |
+                                   <b>Price :</b> $
+                                </p>
+                                <button class="btn btn-outline-warning form-btn" onclick="editBtn(this)">Edit</button>
                                 <button class="btn btn-warning form-btn deleteBtn" onclick="delete_Parent(this)">Remove</button>
                             </div>
                         </div>
                         <div class="dropdown-item card w-100">
                           <div class="card-body">
                                 <h5 class="card-title">Gas filter</h5>
-                                <p class=""><b>Quantitiy :</b> 2 | <b>Price :</b> 50$</p>
-                                <button class="btn btn-outline-warning form-btn" onclick="">Edit</button>
+                                 <p><b>Quantitiy :</b> <span class="productQuant">1</span> | <b>Price :</b>  <span class="productPrice">10</span> $</p>
+                                <p class="d-none"><b>Quantitiy :</b> <input type="number" onkeypress="return onlyNumberKey(event)" class="form-control cuantEdit"> 
+                                    |
+                                   <b>Price :</b> $
+                                </p>
+                                <button class="btn btn-outline-warning form-btn" onclick="editBtn(this)">Edit</button>
                                 <button class="btn btn-warning form-btn " onclick="delete_Parent(this)">Remove</button>
                             </div>
                         </div>
                         <div class="dropdown-item card w-100">
                           <div class="card-body">
                                 <h5 class="card-title">Ninja turtels</h5>
-                                <p class=""><b>Quantitiy :</b> 4 | <b>Price :</b> 1234$</p>
-                                <button class="btn btn-outline-warning form-btn" onclick="">Edit</button>
+                                 <p><b>Quantitiy :</b> <span class="productQuant">1</span> | <b>Price :</b>  <span class="productPrice">10</span> $</p>
+                                <p class="d-none"><b>Quantitiy :</b> <input type="number" onkeypress="return onlyNumberKey(event)" class="form-control cuantEdit"> 
+                                    |
+                                   <b>Price :</b> $
+                                </p>
+                                <button class="btn btn-outline-warning form-btn" onclick="editBtn(this)">Edit</button>
                                 <button class="btn btn-warning form-btn" onclick="delete_Parent(this)">Remove</button>
                             </div>
                         </div>
                     <div class="card-footer text-muted position-sticky" style="bottom: 0px;">
-                        <a style="cursor: default;"><b>Total Price :</b> 1344$</a>
+                        <a style="cursor: default;"><b>Total Price :</b><span id="totPrice"></span>$</a>
                     </div>
                   </div>
               </div>
@@ -318,11 +330,45 @@
             // function getMax(){
             //     var x = document.getElementById("maxPrice").value();
             //     return document.getElementById("minPrice").getAttribute("max")=x;
-            // }
+            // }                                                                         
+
+            function totalSingleProductPrice(e , a){
+              var price = e.childNodes;
+              var newPrice = a.childNodes;
+              price[6].textContent = newPrice[2].value * 10;
+              price[2].textContent = newPrice[2].value;
+            }
+
+            function editBtn(e) {
+              var x =  e.parentNode.childNodes;
+              if (x[3].style.display === "none") {
+                x[3].style.display = "block";
+                x[5].classList.remove("d-block");
+                x[5].classList.add("d-none");
+                e.textContent ="Edit";
+                totalSingleProductPrice(x[3] , x[5]);
+              } else {
+                x[3].style.display = "none";
+                x[5].classList.add("d-block");
+                e.textContent ="Save";
+              }
+            }
 
             function delete_Parent(e)
             {
                 e.parentNode.parentNode.parentNode.removeChild(e.parentNode.parentNode);
+            }
+
+            function calcTotalPrice(){
+              var temp , parseNum;
+              var p = document.getElementsByClassName("productPrice");
+              var totpr = document.getElementById("totPrice");
+              for(i=0 ;i<p.length ; i++){
+                console.log(p[i].textContent);
+                parseNum = parseInt(p[i].textContent);/* not working yet*/
+                temp += parseNum;
+              }
+              totpr.textContent = temp;
             }
 
             function onlyNumberKey(evt) { 

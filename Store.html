@@ -87,10 +87,11 @@
 
             <div class="row">
 
-                <form method="" id="storefilter" class="col-lg-3" style="border-right: 1px solid #ccc;">
-
+                <form method="" id="storefilter" class="col-lg-3 col-md-12">
+                    <div id="collapseElement">
                     <h1 class="my-4">Filters</h1>
-                    <hr>
+                    <hr class="">
+                    
                     <div class="list-group">
                         <p><b>Category :</b></p>
                         <div class="radio-toolbar">
@@ -136,6 +137,8 @@
                     </div>
                     <input type="Submit" class="btn btn-warning form-btn" value="Submit">
                     <input type="Reset" class="btn btn-outline-warning form-btn" value="Reset">
+                  </div>
+                    <span class=" button btn-warning form-btn d-lg-none d-xl-none d-lg-none mt-5" onclick="collapseBtn(this)" style="cursor: pointer;">See Filters</span>
                 </form>
 
                   <!-- /.col-lg-3 -->
@@ -369,6 +372,19 @@
                 temp += parseNum;
               }
               totpr.textContent = temp;
+            }
+
+            function collapseBtn(e){
+              var content = document.getElementById("collapseElement");
+              if (content.style.height === "32rem") {
+                content.style.height = "0.5rem";
+                e.textContent = "See Filters";
+              }
+              else{
+                content.style.height = "32rem";
+                e.textContent = "Collapse";
+              }
+
             }
 
             function onlyNumberKey(evt) { 

@@ -45,35 +45,106 @@ function delete_Parent(e)
     e.parentNode.parentNode.parentNode.removeChild(e.parentNode.parentNode);
 }
 
-            function calcTotalPrice(){
-              var temp , parseNum;
-              var p = document.getElementsByClassName("productPrice");
-              var totpr = document.getElementById("totPrice");
-              for(i=0 ;i<p.length ; i++){
-                console.log(p[i].textContent);
-                parseNum = parseInt(p[i].textContent);/* not working yet*/
-                temp += parseNum;
-              }
-              totpr.textContent = temp;
-            }
+function calcTotalPrice(){
+  var temp , parseNum;
+  var p = document.getElementsByClassName("productPrice");
+  var totpr = document.getElementById("totPrice");
+  for(i=0 ;i<p.length ; i++){
+    console.log(p[i].textContent);
+    parseNum = parseInt(p[i].textContent);/* not working yet*/
+    temp += parseNum;
+  }
+  totpr.textContent = temp;
+}
 
-            function collapseBtn(e){
-              var content = document.getElementById("collapseElement");
-              if (content.style.height === "32rem") {
-                content.style.height = "0.5rem";
-                e.textContent = "See Filters";
-              }
-              else{
-                content.style.height = "32rem";
-                e.textContent = "Collapse";
-              }
+function collapseBtn(e){
+  var content = document.getElementById("collapseElement");
+  if (content.style.height === "32rem") {
+    content.style.height = "0.5rem";
+    e.textContent = "See Filters";
+  }
+  else{
+    content.style.height = "32rem";
+    e.textContent = "Collapse";
+  }
+}
 
-            }
-
-            function onlyNumberKey(evt) { 
+function onlyNumberKey(evt) { 
           
-                var ASCIICode = (evt.which) ? evt.which : evt.keyCode 
-                if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57)) 
-                    return false; 
-                return true; 
-            } 
+  var ASCIICode = (evt.which) ? evt.which : evt.keyCode 
+  if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57)) 
+    return false; 
+    return true; 
+    } 
+$('#myTab a').on('click', function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+})
+
+$("#menu-toggle").click(function(e) {
+  e.preventDefault();
+  $("#wrapper").toggleClass("active");
+});
+
+// Collapse
+$(document).on("click", ".toggle-extra-button", function() {
+// Check if text is more or less
+  if ($(this).text() == "Read More") {
+    $(this).text("Read Less");
+    $(this).parent().children(".toggle-extra").slideDown(); 
+  } 
+  else {
+    $(this).text("Read More");
+    $(this).parent().children(".toggle-extra").slideUp();
+  }
+});
+
+//checkboxes
+    $(document).ready(function(){
+    var mastercheck = false;
+    // Checkboxes array:
+    var checks = [false, false, false, false];
+    $('#master').click(function(){
+        mastercheck = !mastercheck;
+        for(var i = 0; i<checks.length; i++){
+            checks[i] = mastercheck;
+        }
+        updateCheckboxes();
+    });
+    $('.check').click(function(){
+        var pos = $(this).attr('id').replace('chk-','');
+        checks[pos] = !checks[pos];
+        updateCheckboxes();
+    });
+
+    function updateCheckboxes() {
+        var count = 0;
+        for(var i = 0; i<checks.length; i++){
+            if (checks[i]) {
+                count++;
+                $('#chk-'+i).find('i').removeClass('fa-square');
+                $('#chk-'+i).find('i').addClass('fa-check-square');
+            }else {
+                $('#chk-'+i).find('i').removeClass('fa-check-square');
+                $('#chk-'+i).find('i').addClass('fa-square');    
+            }
+        }
+        // Tri-state
+        if(count === checks.length){
+            mastercheck = true;
+            $('#master').find('i').removeClass('fa-square');
+            $('#master').find('i').removeClass('fa-minus-square');
+            $('#master').find('i').addClass('fa-check-square');
+        }else if (count > 0) {
+            mastercheck = false;
+            $('#master').find('i').removeClass('fa-square');
+            $('#master').find('i').removeClass('fa-check-square');
+            $('#master').find('i').addClass('fa-minus-square');
+        }else {
+            mastercheck = false;
+            $('#master').find('i').removeClass('fa-minus-square');
+            $('#master').find('i').removeClass('fa-check-square');
+            $('#master').find('i').addClass('fa-square');
+        }
+    }
+});

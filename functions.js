@@ -148,3 +148,50 @@ $(document).on("click", ".toggle-extra-button", function() {
         }
     }
 });
+
+function ReservEdit(e){
+        var status = e.parentNode.parentNode.childNodes;
+        var cost =status[11].childNodes;
+        switch(e.textContent){
+          case "Cancel" :
+            if(status[9].textContent === "Done"){
+              alert("the Maintenance is already done!");
+            }
+            else{
+            status[9].textContent="Canceled";
+            status[9].style.color="red";
+            cost[1].classList.add("d-block");
+            cost[1].classList.remove("d-none");
+            cost[3].classList.add("d-none");
+            cost[1].textContent="-";
+          }
+            break;
+          case "Done" :
+            while(status[9].textContent==="In progress"){
+              if(cost[3].value.length==0){
+                alert("Please Add the Maintenance Cost");
+              }else{
+                status[9].textContent="Done";
+                status[9].style.color="green";
+                cost[1].classList.add("d-block");
+                cost[1].classList.remove("d-none");
+                cost[3].classList.add("d-none");
+                cost[1].textContent = cost[3].value + "$";
+              }}
+            break;
+          
+          case "Accepted" :
+            while(status[9].textContent==="UpComing"){
+              status[9].textContent="In progress";
+              status[9].style.color="Gray";
+              cost[1].classList.add("d-none");
+              cost[1].classList.remove("d-block");
+              cost[3].classList.remove("d-none");
+            }
+            break;
+          
+          default:
+            break;
+        }
+
+      }

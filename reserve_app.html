@@ -2,9 +2,9 @@
 <html>
 <head>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 	<link rel="stylesheet" type="text/css" href="Style.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.0/css/all.css">
@@ -64,60 +64,7 @@
 		<span class="text-center mt-5 mb-5 col-lg-2 col-md-6 col-sm-6" background-color: black;"><a href="Maint.html" >Available Appointments >></a></span>
 	</div>
 
-
-	<script src="functions.js" type="text/javascript"></script> 
-	<script type="text/javascript">
-
-	//checkboxes
-		$(document).ready(function(){
-    var mastercheck = false;
-    // Checkboxes array:
-    var checks = [false, false, false, false];
-    $('#master').click(function(){
-        mastercheck = !mastercheck;
-        for(var i = 0; i<checks.length; i++){
-            checks[i] = mastercheck;
-        }
-        updateCheckboxes();
-    });
-    $('.check').click(function(){
-        var pos = $(this).attr('id').replace('chk-','');
-        checks[pos] = !checks[pos];
-        updateCheckboxes();
-    });
-
-    function updateCheckboxes() {
-        var count = 0;
-        for(var i = 0; i<checks.length; i++){
-            if (checks[i]) {
-                count++;
-                $('#chk-'+i).find('i').removeClass('fa-square');
-                $('#chk-'+i).find('i').addClass('fa-check-square');
-            }else {
-                $('#chk-'+i).find('i').removeClass('fa-check-square');
-                $('#chk-'+i).find('i').addClass('fa-square');    
-            }
-        }
-        // Tri-state
-        if(count === checks.length){
-            mastercheck = true;
-            $('#master').find('i').removeClass('fa-square');
-            $('#master').find('i').removeClass('fa-minus-square');
-            $('#master').find('i').addClass('fa-check-square');
-        }else if (count > 0) {
-            mastercheck = false;
-            $('#master').find('i').removeClass('fa-square');
-            $('#master').find('i').removeClass('fa-check-square');
-            $('#master').find('i').addClass('fa-minus-square');
-        }else {
-            mastercheck = false;
-            $('#master').find('i').removeClass('fa-minus-square');
-            $('#master').find('i').removeClass('fa-check-square');
-            $('#master').find('i').addClass('fa-square');
-        }
-    }
-});
-	</script>
+	<script type="text/javascript" src="functions.js"></script>
 
 
 </body>

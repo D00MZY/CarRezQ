@@ -817,3 +817,17 @@ option:focus{
   width:3rem;
   display: inline-flex;
 }
+
+/*Admin dashboard */
+
+.table .thead-dark th{
+  color: #ffc107;
+}
+
+.recordsControl span{
+  cursor: pointer;
+}
+
+.recordsControl span:hover{
+  color: #cc9900;
+}

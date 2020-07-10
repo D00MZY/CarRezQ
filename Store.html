@@ -2,11 +2,7 @@
 <html>
     <head>
 
-        <!-- 	bootstrap links -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
         <!-- -->
         <link rel="stylesheet" type="text/css" href="Style.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
@@ -328,73 +324,10 @@
         </div>
       </footer> 
 
-        <script type="text/javascript">
-
-            // function getMax(){
-            //     var x = document.getElementById("maxPrice").value();
-            //     return document.getElementById("minPrice").getAttribute("max")=x;
-            // }                                                                         
-
-            function totalSingleProductPrice(e , a){
-              var price = e.childNodes;
-              var newPrice = a.childNodes;
-              price[6].textContent = newPrice[2].value * 10;
-              price[2].textContent = newPrice[2].value;
-            }
-
-            function editBtn(e) {
-              var x =  e.parentNode.childNodes;
-              if (x[3].style.display === "none") {
-                x[3].style.display = "block";
-                x[5].classList.remove("d-block");
-                x[5].classList.add("d-none");
-                e.textContent ="Edit";
-                totalSingleProductPrice(x[3] , x[5]);
-              } else {
-                x[3].style.display = "none";
-                x[5].classList.add("d-block");
-                e.textContent ="Save";
-              }
-            }
-
-            function delete_Parent(e)
-            {
-                e.parentNode.parentNode.parentNode.removeChild(e.parentNode.parentNode);
-            }
-
-            function calcTotalPrice(){
-              var temp , parseNum;
-              var p = document.getElementsByClassName("productPrice");
-              var totpr = document.getElementById("totPrice");
-              for(i=0 ;i<p.length ; i++){
-                console.log(p[i].textContent);
-                parseNum = parseInt(p[i].textContent);/* not working yet*/
-                temp += parseNum;
-              }
-              totpr.textContent = temp;
-            }
-
-            function collapseBtn(e){
-              var content = document.getElementById("collapseElement");
-              if (content.style.height === "32rem") {
-                content.style.height = "0.5rem";
-                e.textContent = "See Filters";
-              }
-              else{
-                content.style.height = "32rem";
-                e.textContent = "Collapse";
-              }
-
-            }
-
-            function onlyNumberKey(evt) { 
-          
-                var ASCIICode = (evt.which) ? evt.which : evt.keyCode 
-                if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57)) 
-                    return false; 
-                return true; 
-            } 
-        </script>
-
+        <script type="text/javascript" src="functions.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+                                                               
     </body>
 </html>

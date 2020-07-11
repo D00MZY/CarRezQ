@@ -1,0 +1,296 @@
+
+body{
+  margin:0;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+hr{
+  width: 6rem;
+}
+
+ul{
+  list-style: none;
+}
+
+a{
+  color: black;
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+option:hover{
+  color: #cc9900;
+  background-color: #e9ecef;
+  cursor: pointer;
+}
+
+option:focus{
+  color: #cc9900;
+  background-color: #e9ecef;
+  cursor: pointer;
+}
+
+
+tr:hover{
+  background-color: #d9d9d9;
+  cursor: pointer;
+}
+
+
+.btn-outline-warning:hover{
+  color: #cc9900;
+  background-color: #e9ecef;
+  }
+
+.h1F{
+  color:#222;
+  text-shadow:2px 2px #e0a800;
+}
+
+.h1S{
+  color: white; 
+  text-shadow: 2px 2px #e0a800;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link{
+  color:#ffc107 ;
+  background: #222;
+}
+
+.nav-link{
+  cursor: pointer;
+}
+
+.card{
+  border:0px solid rgba(0,0,0,.125);
+
+}
+
+.card-header, .card-footer{
+  background-color: #e6e6e6;
+}
+
+.form-control:focus{
+  border-color: #d39e00;
+  box-shadow:0px 0px 0px 0.2rem rgba(222,170,12,0.5);
+}
+
+#nav{
+  background-color:; 
+  transition: all 1s ease-in-out;
+}
+
+.scroll{
+  background-color: #222;
+}
+
+.row i:hover{
+  color:#595959;
+  cursor: pointer;
+}
+
+.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover{
+  color: #ffc107;
+}
+
+.notif{
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  border-radius: 2px;
+  color: #999;
+}
+
+.badge{
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  padding: 5px 10px;
+  width: 1rem;
+  height: 1rem;
+  text-align: center;
+  background: red;
+  color: white;
+  font-size: 0.49em;
+}
+
+.dropdown a:hover{
+  color:#ffc107;
+  cursor: pointer;
+  background-color: #222;
+  transition: background .5s;
+}
+
+.dropdown a:active{
+  background-color: black;
+}
+
+.card-header a, .card-footer a{
+ color: black;
+ font-size:0.8rem;
+ background-color: white;
+}
+
+a:hover{
+  color: #cc9900;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+  color: white;
+  background-color: #222;
+}
+
+#wrapper {
+    padding-left:1rem;
+    transition: all .4s ease 0s;
+    height: 100%;
+    position: sticky;
+}
+
+#sidebar-wrapper {
+    margin-left: -150px;
+    left:-1rem; /*the width of the small nav*/
+    width: 15rem;
+    top: 3.6rem;
+    background: #222;
+    position: fixed;
+    height: 100%;
+    z-index: 10000;
+    transition: all .4s ease 0s;
+}
+
+.sidebar-nav {
+    display: block;
+    float: left;
+    width: 15rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#page-content-wrapper {
+  dwpadding-left: 0;
+  margin-left: 0;
+  width: 100%;
+  height: auto;
+}
+
+#wrapper.active #sidebar-wrapper {
+    left: 9rem;
+}
+
+#page-content-wrapper {
+  width: 100%;
+}
+
+
+#sidebar_menu li a, .sidebar-nav li a {
+    color: #999;
+    display: block;
+    float: left;
+    text-decoration: none;
+    width: 15rem;
+    background: #252525;
+    border-top: 1px solid #373737;
+    border-bottom: 1px solid #1A1A1A;
+    transition: background .5s;
+}
+
+.sidebar-nav li {
+  line-height: 40px;
+  text-indent: 20px;
+}	
+
+.sidebar-nav li a:hover {
+  color: #ffc107;
+  background-color: #222;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+  text-decoration: none;
+  background-color: black;
+}
+
+.navbar-brand{
+  color: #ffc107 !important;
+}
+
+
+.sidebar-nav > .sidebar-brand {
+  height: 65px;
+  line-height: 60px;
+  font-size: 18px;
+}
+
+.main{
+	position: absolute;
+	float: right;
+	transition: all .4s ease 0s;
+	text-align: center;
+}
+
+#wrapper.active .main{
+	width: calc(100% - 13.5rem); /*keeps 100% minus nav size*/
+	margin-left: 13.5rem;
+}
+
+#wrapper .main{
+	width: calc(100% - 3.5rem); /*keeps 100% minus nav size*/
+	margin-left: 3.5rem;
+}
+
+.latestNews_slider{
+	height: 30rem;
+}
+
+.NS_images{
+	height: 30rem;
+	width: 100%;
+}
+
+.UD_PagesThumnail_imagegesThumnail{
+	width: 98%;
+	margin: auto;
+	margin-right: 20px;
+  margin-top: 6rem;
+	border-width: 0;
+}
+
+.UD_PagesThumnail_image{
+	height: 20rem;
+	width: 90%;
+	margin: auto;
+	cursor: pointer;
+	opacity: 0.9;
+	border: 1px solid #ffc107;
+}
+
+.UD_PagesThumnail_image:hover{
+	opacity: 1;
+}
+
+.table .thead-dark th{
+  color: #ffc107;
+  background-color: #222;
+}
+
+.recordsControl span{
+  cursor: pointer;
+}
+
+.recordsControl span:hover{
+  color: #cc9900;
+}
+
+.cuantEdit{
+  width:5rem;
+  display: inline-flex;
+}

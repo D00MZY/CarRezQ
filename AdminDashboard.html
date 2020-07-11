@@ -3,7 +3,7 @@
 	<head>
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-		<link rel="stylesheet" type="text/css" href="Style.css">
+		<link rel="stylesheet" type="text/css" href="AdminDashboard.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.0/css/all.css">
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -12,7 +12,7 @@
 		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 		<title>Home</title>
 	</head>
-	<body>
+	<body id="#adminDash">
 
 		<nav class="navbar navbar-dark justify-content-between fixed-top" style="background-color: #222;">
 		  <a class="navbar-brand">CarRezQ</a>
@@ -48,7 +48,7 @@
 				   </li>
 		          <li data-toggle="pill" href="#ManageResrv" role="tab" aria-selected="false" aria-controls="ManageResrv-tab">
 			          <a class="nav-link" id="ManageResrv-tab" ><p style="float: left;" >Manage Reserv.</p>
-					        <i class="fas fa-cogs" style="float:right;  margin-top:0.8rem;margin-right: ; font-size: 1.9rem;"></i>
+					        <i class="fas fa-cogs" style="float:right;  margin-top:0.8rem;margin-right: ; font-size: 1.7rem;"></i>
 					   </a>
 				   </li>
 		          <li data-toggle="pill"  href="#CreateUA" role="tab"  aria-selected="false" aria-controls="CreateUA-tab">
@@ -102,12 +102,90 @@
 							    </a>
 						</div>
 					</div>
+					<div class="col-12 mb-5">
+						<h3 class="h1F mt-5 mb-5">Users Requests</h3>
+						<div class="col-12">
+							<table class="table table-bordered col-11 m-auto">
+								<thead class="thead-dark">
+									<tr>
+										<th width="20%">Request</th>
+										<th width="55%">Details</th>
+										<th width="10%">Date</th>
+										<th width="15%">Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											<h4>Mohamed Ali</h4>
+											<p>Profile change</p>
+										</td>
+										<td>I want to change my Password</td>
+										<td>10-2-2020</td>
+										<td class="recordsControl">
+							      			<span onclick="userReqest(this)">Accept</span> |
+											<span onclick="userReqest(this)">Reject</span> 	
+										</td>
+										
+									</tr>
+									<tr>
+										<td>
+											<h4>Saeed Khaled</h4>
+											<p>Reservation</p>
+										</td>
+										<td>I want to cancel my 22-10-2020 reservation</td>
+										<td>10-2-2020</td>
+										<td class="recordsControl">
+							      			<span onclick="userReqest(this)">Accept</span> |
+											<span onclick="userReqest(this)">Reject</span> 	
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<h4>Moahemd Ali</h4>
+											<p>Profile change</p>
+										</td>
+										<td>I want to change my Phone Number from 01010101 to 0202020</td>
+										<td>10-2-2020</td>
+										<td class="recordsControl">
+							      			<span onclick="userReqest(this)">Accept</span> |
+											<span onclick="userReqest(this)">Reject</span> 	
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<h4>Moahemd Ali</h4>
+											<p>Profile change</p>
+										</td>
+										<td>I want to change my Phone Number from 01010101 to 0202020</td>
+										<td>10-2-2020</td>
+										<td class="recordsControl">
+							      			<span onclick="userReqest(this)">Accept</span> |
+											<span onclick="userReqest(this)">Reject</span> 	
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<h4>Moahemd Ali</h4>
+											<p>Profile change</p>
+										</td>
+										<td>I want to change my Phone Number from 01010101 to 0202020</td>
+										<td>10-2-2020</td>
+										<td class="recordsControl">
+							      			<span onclick="userReqest(this)">Accept</span> |
+											<span onclick="userReqest(this)">Reject</span> 	
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
 				</div>
 
 				<div class="row tab-pane fade" id="ManageResrv" role="tabpanel" aria-labelledby="ManageResrv-tab">
 					<br>
-					<br>
-					<br>
+					<h3 class="h1F mt-5 mb-4">Center's Reservations</h3>
+					
 					<table class="table col-11 m-auto">
 							<thead class="thead-dark">
 							    <tr>
@@ -122,7 +200,7 @@
 							</thead>
 							<tbody>
 							    <tr>
-							      <th scope="row">1</th>
+							      <td>1</td>
 							      <td>Mark</td>
 							      <td>1-12-2020</td>
 							      <td>@mdo</td>
@@ -138,7 +216,7 @@
 							      </td>
 							    </tr>
 							    <tr>
-							      <th scope="row">2</th>
+							      <td>2</td>
 							      <td>Jacob</td>
 							      <td>11-2-2020</td>
 							      <td>@fat</td>
@@ -154,7 +232,7 @@
 							      </td>
 							    </tr>
 							    <tr>
-							      <th scope="row">3</th>
+							      <td>3</td>
 							      <td>Larry</td>
 							      <td>11-2-2020</td>
 							      <td>@twitter</td>
@@ -170,7 +248,7 @@
 							      </td>
 							    </tr>
 							    <tr>
-							    <th scope="row">4</th>
+							    <td>4</td>
 							      <td>Larry</td>
 							      <td>11-10-2020</td>
 							      <td>@twitter</td>
@@ -193,7 +271,7 @@
 					<div class="card text-center" style=" margin: auto; margin-top: 80px; width: 90%;">
 						  <div class="card container col-lg-6 col-md-7 mb-5">
 							<article class="card-body mx-auto" style="max-width: ;">
-									<h4 class="card-title mt-3 text-center mb-5">Create An Account</h4>
+									<h3 class="card-title mt-3 text-center mb-5 h1F">Create An Account</h3>
 									<hr>
 									<p class="text-success text-center">Please Enter Your Information here</p>
 									<form>

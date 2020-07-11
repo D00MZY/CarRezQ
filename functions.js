@@ -150,8 +150,8 @@ $(document).on("click", ".toggle-extra-button", function() {
 });
 
 function ReservEdit(e){
-        var status = e.parentNode.parentNode.childNodes;
-        var cost =status[11].childNodes;
+        const status = e.parentNode.parentNode.childNodes;
+        const cost =status[11].childNodes;
         switch(e.textContent){
           case "Cancel" :
             if(status[9].textContent === "Done"){
@@ -167,7 +167,7 @@ function ReservEdit(e){
           }
             break;
           case "Done" :
-            while(status[9].textContent==="In progress"){
+            if(status[9].textContent==="In progress"){
               if(cost[3].value.length==0){
                 alert("Please Add the Maintenance Cost");
               }else{
@@ -178,6 +178,7 @@ function ReservEdit(e){
                 cost[3].classList.add("d-none");
                 cost[1].textContent = cost[3].value + "$";
               }}
+              else
             break;
           
           case "Accepted" :
@@ -195,3 +196,18 @@ function ReservEdit(e){
         }
 
       }
+
+function userReqest(e){
+  const status = e.parentNode;
+  const newStatus = document.createElement("p");
+  if (e.textContent === "Accept") {
+    newStatus.textContent = "Accepted";
+    newStatus.style.color="green";
+  }
+  else{
+    newStatus.textContent = "Rejected";
+    newStatus.style.color="red";
+  }
+  status.textContent="";
+  status.appendChild(newStatus);
+  }

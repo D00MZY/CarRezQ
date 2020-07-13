@@ -211,3 +211,9 @@ function userReqest(e){
   status.textContent="";
   status.appendChild(newStatus);
   }
+
+  function cancelRequest(e){
+        const appointStatus = e.parentNode.childNodes;
+        appointStatus[1].textContent="Waiting for Admin Approval"
+        appointStatus[1].style.color="red";
+      }

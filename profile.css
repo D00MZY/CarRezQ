@@ -1,0 +1,134 @@
+body{
+	margin:0;
+	background-color: white;
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+}
+
+hr{
+	width: 6rem;
+}
+
+ul{
+	list-style: none;
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+option:hover{
+  color: #cc9900;
+  background-color: #e9ecef;
+  cursor: pointer;
+}
+
+option:focus{
+  color: #cc9900;
+  background-color: #e9ecef;
+  cursor: pointer;
+}
+
+
+tr:hover{
+  background-color: #d9d9d9;
+  cursor: pointer;
+}
+
+
+.btn-outline-warning:hover{
+  color: #cc9900;
+  background-color: #e9ecef;
+  }
+
+.h1F{
+  color:#222;
+  text-shadow:2px 2px #e0a800;
+}
+
+.h1S{
+  color: white; 
+  text-shadow: 2px 2px #e0a800;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link{
+  color:#ffc107 ;
+  background: #222;
+}
+
+.nav-link{
+  cursor: pointer;
+}
+
+.card{
+  border:0px solid rgba(0,0,0,.125);
+
+}
+
+.card-header, .card-footer{
+  background-color: #e6e6e6;
+}
+
+.form-control:focus{
+  border-color: #d39e00;
+  box-shadow:0px 0px 0px 0.2rem rgba(222,170,12,0.5);
+}
+
+.btn-outline-warning{
+	color: black;
+}
+
+.form-btn{
+  margin: 10px;
+  padding:10px 20px;
+  border-radius: 5px;
+  float: right;
+  border: 1px solid rgba(0,0,0,.125);
+  font-size :16px;
+  font-weight:400;
+}
+
+.fromTotxt{
+	width: 45%;
+	margin-top: 2rem;
+	margin-right: 1rem;
+}
+
+#nav{
+	background-color:; 
+	transition: all 1s ease-in-out;
+}
+
+.scroll{
+	background-color: #222;
+}
+
+.row i:hover{
+	color:#595959;
+	cursor: pointer;
+}
+
+.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover{
+	color: #ffc107;
+}
+
+.storeLogo{
+  margin: auto;
+  margin-bottom: -2rem;
+  width: 10%;
+  background-color: #ffc107;
+  border-radius: 10px;
+  padding: 1rem;
+  color: #222 !important;
+  text-align: center;
+}
+
+#profilePage{
+  margin-top: 5rem;
+}
+
+.cuantEdit{
+  width:3rem;
+  display: inline-flex;
+}

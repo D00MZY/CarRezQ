@@ -2,8 +2,11 @@
 <html>
 <head>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
-	<link rel="stylesheet" type="text/css" href="Style.css">
+	<link rel="stylesheet" type="text/css" href="Maint.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.0/css/all.css">
 
 	<title>Maintenance</title>
@@ -12,57 +15,6 @@
 	<nav class="navbar navbar-dark justify-content-between fixed-top" style="background-color: #222;">
 		  <a class="navbar-brand">CarRezQ</a>
 		  <div class="row">
-			  <div class="dropdown col-lg-2 col-md-2 d-none d-md-block">
-		  		  <a  class="rounded" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-		  	  	  	<i class="fas fa-bell fa-2x notif" style="font-size: 1.3rem;"><span class="badge"><p>1</p></span></i>
-				  </a>
-				  <div class="dropdown-menu dropdown-menu-right notif_menu" aria-labelledby="dropdownMenuButton">
-				    <div class="card-header row sticky-top">
-					    <span class="col-8">Notifications</span>
-					    <a href="" class="col-4">Mark all as read</a>
-				    </div>
-				    	<div class="dropdown-item card w-100">
-						  <div class="card-body">
-							    <h5 class="card-title">#1</h5>
-							    <p class="card-text"><b>CAR :</b> Toyota</p>
-							</div>
-						</div>
-						<div class="dropdown-item card w-100">
-						  <div class="card-body">
-							    <h5 class="card-title">#1</h5>
-							    <p class="card-text"><b>CAR :</b> Toyota</p>
-
-							</div>
-						</div>
-						<div class="dropdown-item card w-100">
-						  <div class="card-body">
-							    <h5 class="card-title">#1</h5>
-							    <p class="card-text"><b>CAR :</b> Toyota</p>
-							</div>
-						</div>
-						<div class="dropdown-item card w-100">
-						  	<div class="card-body">
-							    <h5 class="card-title">#1</h5>
-							    <p class="card-text"><b>CAR :</b> Toyota</p>
-							</div>
-						</div>
-						<div class="dropdown-item card w-100">
-						  	<div class="card-body">
-							    <h5 class="card-title">#1</h5>
-							    <p class="card-text"><b>CAR :</b> Toyota</p>
-							</div>
-						</div>
-						<div class="dropdown-item card w-100">
-						  	<div class="card-body">
-							    <h5 class="card-title">#1</h5>
-							    <p class="card-text"><b>CAR :</b> Toyota</p>
-							</div>
-						</div>
-					<div class="card-footer text-muted position-sticky" style="bottom: 0px;">
-						<a href="">See More</a>
-					</div>
-				  </div>
-			  </div>
 			  <div class="dropdown col-5">
 				  <a class="rounded" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				    <i class="fas fa-user-circle fa-2x notif"></i>
@@ -93,16 +45,13 @@
                                 <option>Example one</option>
                             </select>
                         </div>
-                        <div class="col-lg-3 col-md-3 col-sm-12 p-0">
+                        <div class="col-lg-4 col-md-4 col-sm-12 p-0">
                             <select class="form-control search-slt" id="maint_search">
                                 <option>Neighbourhood</option>
                                 <option>Example one</option>
                                 <option>Example one</option>
                                 <option>Example one</option>
                             </select>
-                        </div>
-                        <div class="col-lg-1 col-md-1 col-sm-12 p-0">
-                        	<input class="form-control search-slt" type="date" name="appoint_date">
                         </div>
                         <div class="col-lg-1 col-md-1 col-sm-0" style="height: 1rem;"></div>
                         <div class="col-lg-2 col-md-2 col-sm-12 p-0">
@@ -116,7 +65,7 @@
 </section>
 
 <div id="maint_reservationT" class="container text-center">
-	<h1 class="mb-5 h1F">Available Appointments</h1>
+	<h1 class="mb-5 h1F">Available Centers</h1>
 
 	<div class="card mb-1 w-100">
   <div class="row no-gutters">
@@ -129,17 +78,7 @@
         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,.</p>
         <p class="card-text">
-	        <p><b>Time</b></p>
-				<ul class="appoint_T">
-					<li>
-					<p class="col-6">02.00PM ~ 04.00PM</p>
-					<a href="reserve_app.html" class="btn btn-warning col-3">Reserve</a>
-					</li>
-					<li>
-					<p  class="col-6">07.00PM ~ 08.00PM</p>
-					<a href="reserve_app.html" class="btn btn-warning col-3">Reserve</a>
-					</li>
-				</ul>
+				<a href="reserve_app.html" class="btn btn-warning form-btn col-3 mt-5">Select</a>
 			</p>
       </div>
     </div>
@@ -158,18 +97,8 @@
         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,.</p>
         <p class="card-text">
-	        <p><b>Time</b></p>
-				<ul class="appoint_T">
-					<li>
-					<p class="col-6">02.00PM ~ 04.00PM</p>
-					<a href="reserve_app.html" class="btn btn-warning col-3">Reserve</a>
-					</li>
-					<li>
-					<p  class="col-6">07.00PM ~ 08.00PM</p>
-					<a href="reserve_app.html" class="btn btn-warning col-3">Reserve</a>
-					</li>
-				</ul>
-			</p>
+			<a href="reserve_app.html" class="btn btn-warning form-btn col-3 mt-5">Select</a>
+		</p>
       </div>
     </div>
 
@@ -209,9 +138,7 @@
   </footer>
 
   <script type="text/javascript" src="functions.js"></script>
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  
 
 </body>
 </html> 

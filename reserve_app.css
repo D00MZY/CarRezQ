@@ -1,0 +1,94 @@
+body{
+	margin:0;
+	background-color: white;
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+}
+
+hr{
+	width: 6rem;
+}
+
+ul{
+	list-style: none;
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+option:hover{
+  color: #cc9900;
+  background-color: #e9ecef;
+  cursor: pointer;
+}
+
+option:focus{
+  color: #cc9900;
+  background-color: #e9ecef;
+  cursor: pointer;
+}
+
+
+tr:hover{
+  background-color: #d9d9d9;
+  cursor: pointer;
+}
+
+label{
+	margin-right: 1rem;
+	margin-bottom: 2rem;
+}
+
+
+.btn-outline-warning:hover{
+  color: #cc9900;
+  background-color: #e9ecef;	
+  }
+
+.h1F{
+  color:#222;
+  text-shadow:2px 2px #e0a800;
+}
+
+.h1S{
+  color: white; 
+  text-shadow: 2px 2px #e0a800;
+}
+.storeLogo{
+  margin: auto;
+  margin-bottom: -2rem;
+  width: 10%;
+  background-color: #ffc107;
+  border-radius: 10px;
+  padding: 1rem;
+  color: #222 !important;
+  text-align: center;
+}
+
+.appointHeader{
+	text-align: center;
+	margin-top: 6rem;
+	margin-bottom: 6rem;
+}
+
+.form-control{
+  width: 12rem;
+  margin-right: 1rem;
+}
+
+.form-control:focus{
+  border-color: #d39e00;
+  box-shadow:0px 0px 0px 0.2rem rgba(222,170,12,0.5);
+}
+
+.page-footer{
+  background-color: #222;
+  color:#ffc107;
+}
+
+.page-footer i:hover{
+  cursor: pointer;
+  color: #e0a800;
+}

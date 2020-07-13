@@ -1,0 +1,233 @@
+
+body{
+  margin:0;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+hr{
+  width: 6rem;
+}
+
+ul{
+  list-style: none;
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+option:hover{
+  color: #cc9900;
+  background-color: #e9ecef;
+  cursor: pointer;
+}
+
+option:focus{
+  color: #cc9900;
+  background-color: #e9ecef;
+  cursor: pointer;
+}
+
+
+tr:hover{
+  background-color: #d9d9d9;
+  cursor: pointer;
+}
+
+.navbar-brand{
+  color: #ffc107 !important;
+}
+
+.btn-outline-warning:hover{
+  color: #cc9900;
+  background-color: #e9ecef;
+  }
+
+.h1F{
+  color:#222;
+  text-shadow:2px 2px #e0a800;
+}
+
+.h1S{
+  color: white; 
+  text-shadow: 2px 2px #e0a800;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link{
+  color:#ffc107 ;
+  background: #222;
+}
+
+.nav-link{
+  cursor: pointer;
+}
+
+.card{
+  border:0px solid rgba(0,0,0,.125);
+
+}
+
+.card-header, .card-footer{
+  background-color: #e6e6e6;
+}
+
+.form-control:focus{
+  border-color: #d39e00;
+  box-shadow:0px 0px 0px 0.2rem rgba(222,170,12,0.5);
+}
+#search-sec{
+    padding: 2rem;
+}
+.search-slt{
+    display: block;
+    width: 100%;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: #55595c;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    height: calc(3rem + 2px) !important;
+    border-radius:0;
+}
+.wrn-btn{
+    width: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: capitalize;
+    border-radius:0;
+}
+
+#maint_reservationT , #resv_card{
+  margin-top: 8rem;
+}
+
+#maint_reservationT > .card{
+  margin-top: 2rem;
+  border: 1px solid #ccc;
+}
+
+.appoint_T li{
+  margin-top: 1rem;
+}
+
+.appoint_T a{
+  border-radius:10px;
+  padding: 0.2rem 0rem;
+  font-weight:500;
+}
+
+.appoint_T p{
+  float: left;
+  margin-bottom: 0px;
+}
+
+@media (min-width: 993px){
+    #search-sec{
+        position: relative;
+        background: black;
+    }
+}
+
+@media (max-width: 993px){
+    #search-sec{
+        margin-top: 3rem;
+        background: black;
+    }
+}
+
+.maint_type button{
+  background-color: white;
+  border-color:white;
+  padding:0px;
+}
+
+#nav{
+  background-color:; 
+  transition: all 1s ease-in-out;
+}
+
+.scroll{
+  background-color: #222;
+}
+
+.row i:hover{
+  color:#595959;
+  cursor: pointer;
+}
+
+.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover{
+  color: #ffc107;
+}
+.notif{
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  border-radius: 2px;
+  color: #999;
+}
+
+.badge{
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  padding: 5px 10px;
+  width: 1rem;
+  height: 1rem;
+  text-align: center;
+  background: red;
+  color: white;
+  font-size: 0.49em;
+}
+
+.dropdown a:hover{
+  color:#ffc107;
+  cursor: pointer;
+  background-color: #222;
+  transition: background .5s;
+}
+
+.dropdown a:active{
+  background-color: black;
+}
+
+.github_icon , .twitter_icon{
+  width: 5rem;
+  height: 2rem;
+  float: left;
+  color: white;
+  margin-top: 30px;
+}
+
+.github_icon{
+  background-color: #bd2c00;
+
+}
+
+.twitter_icon{
+  background-color: #1da1f2;
+}
+
+#Feedback{
+  background-color: white;
+  
+}
+
+.page-footer{
+  background-color: #222;
+  color:#ffc107;
+  bottom:0px;
+}
+
+.page-footer i:hover{
+  cursor: pointer;
+  color: #e0a800;
+}
+
+.btn{
+  float: right;
+  margin-bottom: 1rem;
+}

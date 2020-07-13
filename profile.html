@@ -2,13 +2,8 @@
 <html>
 	<head>
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-		<link rel="stylesheet" type="text/css" href="Style.css">
+		<link rel="stylesheet" type="text/css" href="profile.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.0/css/all.css">
 
 		<title>Profile</title>
@@ -21,7 +16,7 @@
 
 		<div id="profilePage" class="container">
 	    <div class="row mb-5">
-	  		<div class="col-sm-10"><h1 class="h1F" >User Name</h1></div>
+	  		<div class="col-sm-10"><h1 class="h1F" >User Full Name</h1></div>
 	    </div>
 	    <hr>
 	    <div class="row">
@@ -30,15 +25,6 @@
 	      <div class="text-center">
 	        <img src="zaytona.jpg" class="avatar img-circle img-thumbnail" alt="avatar">
 	      </div></hr><br>
-	          
-	          <ul class="list-group">
-	            <li class="list-group-item text-muted">Activity <i class="fa fa-dashboard fa-1x"></i></li>
-	            <li class="list-group-item text-right"><span class="pull-left"><strong>Shares</strong></span> 125</li>
-	            <li class="list-group-item text-right"><span class="pull-left"><strong>Likes</strong></span> 13</li>
-	            <li class="list-group-item text-right"><span class="pull-left"><strong>Posts</strong></span> 37</li>
-	            <li class="list-group-item text-right"><span class="pull-left"><strong>Followers</strong></span> 78</li>
-	          </ul> 
-	               
 	        </div>
 	    	<div class="col-sm-9">      
 	                  <form id="profileCard" class="form row" method="post">
@@ -61,14 +47,14 @@
 	                          
 	                          <div class="col-xs-6">
 	                              <label for="phone"><h4>Phone</h4></label>
-	                              <input type="phone" class="form-control" name="phone" id="phone" placeholder="1234567" disabled>
+	                              <input type="phone" class="form-control" name="phone" id="phone" placeholder="012345678" disabled>
 	                          </div>
 	                      </div>
 	          
 	                      <div class="col-lg-5 form-group">
 	                          <div class="col-xs-6">
 	                             <label for="carBrand"><h4>Car Brand</h4></label>
-	                              <input type="text" class="form-control" name="carBrand" id="carBrand" placeholder="Brand" disabled>
+	                              <input type="text" class="form-control" name="carBrand" id="carBrand" placeholder="Ex.Toyota" disabled>
 	                          </div>
 	                      </div>
 
@@ -76,27 +62,67 @@
 	                          
 	                          <div class="col-xs-6">
 	                              <label for="carModel"><h4>Car Model</h4></label>
-	                              <input type="text" class="form-control" id="carModel" placeholder="Model" disabled>
+	                              <input type="text" class="form-control" id="carModel" placeholder="Ex.Corola" disabled>
 	                          </div>
 	                      </div>
 	                      <div class="col-lg-5 form-group">
 	                          
 	                          <div class="col-xs-6">
-	                              <label for="City"><h4>City</h4></label>
-	                              <input type="text" class="form-control" name="City" id="City" placeholder="City Name" disabled>
+	                              <label for="password"><h4>City</h4></label>
+	                              <input type="text" class="form-control" name="password" id="password" placeholder="City" disabled>
 	                          </div>
 	                      </div>
 	                      <div class="col-lg-5 form-group">
 	                          
 	                          <div class="col-xs-6">
 	                            <label for="lastChecked"><h4>Last Checked</h4></label>
-	                              <input type="text" class="form-control" name="lastChecked" id="lastChecked" placeholder="dd-mm-yyyy"disabled>
+	                              <input type="text" class="form-control" name="lastChecked" id="lastChecked" placeholder="22-5-2020"disabled>
 	                          </div>
 	                      </div>
 	                      <div class="col-lg-12 form-group">
 	                           <div class="">
 	                                <br>
-	                              	<button class="btn btn-outline-warning form-btn" type="submit">Request a Change</button>
+	                              	<button type="button" class="btn btn-outline-warning form-btn"  data-toggle="modal" data-target="#changeRequest">Request a Change</button>
+	                              	
+									<!-- Modal -->
+									<div class="modal fade" id="changeRequest" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+									  <div class="modal-dialog modal-dialog-centered" role="document">
+									    <div class="modal-content">
+									      <div class="modal-header">
+									        <h5 class="modal-title" id="changeRequestTitle">Request a profile change</h5>
+									        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									          <span aria-hidden="true">&times;</span>
+									        </button>
+									      </div>
+									      <form>
+										      	<div class="modal-body">
+										        	<div class="form-group">
+										        		<p>Property</p>
+										        		<select class="form-control" name="propertyName">
+										        			<option>Full Name</option>
+										        			<option>Password</option>
+										        			<option>E-Mail</option>
+										        			<option>Phone Number</option>
+										        			<option>City</option>
+										        		</select>
+										        		<label class="fromTotxt">
+										        			Old :
+										        			<input type="text" name="changeFrom" class="form-control">
+										        		</label>
+										        		<label class="fromTotxt">
+										        			New :
+										        			<input type="text" name="changeTo" class="form-control">
+										        		</label>
+										        	</div>
+										      	</div>
+										    <div class="modal-footer">
+										    	<button type="button" class="btn btn-outline-warning form-btn" data-dismiss="modal">Close</button>
+										    	<button type="submit" class="btn btn-warning form-btn">Request</button>
+										    </div>
+									   </form>
+									    </div>
+									  </div>
+									</div>
 	                              	<a class="btn btn-warning form-btn" href="UserDashboard.html" type="submit">My dashboard</a>
 	                            </div>
 	                      </div>
@@ -104,4 +130,10 @@
 	       		</div>
 	       	</div>
        	</div>
+
+       	<script type="text/javascript" src="functions.js"></script>
+  		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+ 		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+ 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 	</body>
+</html>
